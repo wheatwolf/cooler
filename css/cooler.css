@@ -1,0 +1,48 @@
+/* Pop Card */
+.cooler-popCard {
+  --popCard_height: 150px;
+  --popCard_basic_width: 300px;
+  --popCard_more_width: 200px;
+  height: var(--popCard_height);
+  width: var(--popCard_basic_width);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.cooler-popCard .cooler-popCard__basic {
+  z-index: 1;
+  width: var(--popCard_basic_width);
+  height: 100%;
+  position: absolute;
+  background-color: #333;
+  transition: 0.8s;
+}
+.cooler-popCard .cooler-popCard__basic h3 {
+  color: #fff;
+}
+.cooler-popCard:hover {
+  width: calc(var(--popCard_basic_width) + var(--popCard_more_width));
+}
+.cooler-popCard:hover .cooler-popCard__basic {
+  background: #ff0057;
+}
+.cooler-popCard:hover .cooler-popCard__more {
+  left: var(--popCard_basic_width);
+  width: var(--popCard_more_width);
+}
+.cooler-popCard .cooler-popCard__more {
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow: hidden;
+  left: 0;
+  width: var(--popCard_basic_width);
+  height: var(--popCard_height);
+  transition: 0.5s;
+}
+/* Can I set a new value for popCard_width */
+/* .cooler-popCard {
+  --popCard_basic_width: 300px;
+} */
+/* Yes */

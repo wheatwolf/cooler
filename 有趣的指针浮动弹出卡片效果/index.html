@@ -5,32 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>有趣的指针浮动弹出卡片效果</title>
-    <link rel="shortcut icon" href="../../resource/bitbug_favicon.ico" />
+    <link rel="shortcut icon" href="../resource/bitbug_favicon.ico" />
+    <link rel="stylesheet" href="../css/cooler.css">
   </head>
   <body>
     <div class="wrapper">
-      <div class="cool_card" style="margin: 10px 0">
-        <div class="brief">
-          <h3>Brief</h3>
+      <div class="cooler-popCard" style="margin: 10px 0">
+        <div class="cooler-popCard__basic">
+          <h3>Basic</h3>
         </div>
-        <div class="detail">
-          <h3>Detail</h3>
-        </div>
-      </div>
-      <div class="cool_card" style="margin: 10px 0">
-        <div class="brief">
-          <h3>Brief</h3>
-        </div>
-        <div class="detail">
-          <h3>Detail</h3>
+        <div class="cooler-popCard__more">
+          <h3>More</h3>
         </div>
       </div>
-      <div class="cool_card" style="margin: 10px 0">
-        <div class="brief">
-          <h3>Brief</h3>
+      <div class="cooler-popCard" style="margin: 10px 0">
+        <div class="cooler-popCard__basic">
+          <h3>Basic</h3>
         </div>
-        <div class="detail">
-          <h3>Detail</h3>
+        <div class="cooler-popCard__more">
+          <h3>More</h3>
+        </div>
+      </div>
+      <div class="cooler-popCard" style="margin: 10px 0">
+        <div class="cooler-popCard__basic">
+          <h3>Basic</h3>
+        </div>
+        <div class="cooler-popCard__more">
+          <h3>More</h3>
         </div>
       </div>
     </div>
@@ -50,50 +51,15 @@
       width: 1000px;
       height: 900px;
       display: flex;
-      /* justify-content: space-around; */
       flex-direction: column;
       padding: 20px;
       box-sizing: border-box;
     }
-    .cool_card {
-      --card_width: 300px;
-      --card_height: 150px;
-      height: var(--card_height);
-      width: var(--card_width);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-      position: relative;
-      cursor: pointer;
-      transition: 0.5s;
-    }
-    .cool_card .brief {
-      z-index: 1;
-      width: var(--card_width);
-      height: 100%;
-      position: absolute;
-      background-color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: 0.5s;
-    }
-    .cool_card .brief h3 {
-      color: #fff;
-    }
-    .cool_card:hover {
-      width: calc(var(--card_width) * 2);
-    }
-    .cool_card:hover .brief {
-      background: #ff0057;
-    }
-    .cool_card .detail {
-      position: absolute;
-      padding: 5px;
-      box-sizing: border-box;
-      background-color: #fff;
-      right: 0;
-      height: var(--card_height);
-      width: var(--card_width);
-      transition: 0.5s;
+    .cooler-popCard {
+      /* 像函数那样传入参数 */
+      --popCard_height: 100px;
+      --popCard_basic_width: 400px;
+      --popCard_more_width: 300px;
     }
   </style>
 </html>
