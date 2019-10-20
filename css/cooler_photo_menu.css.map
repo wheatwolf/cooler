@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/cooler_photo_menu.scss"
+    ],
+    "names": [],
+    "file": "cooler_photo_menu.css"
+}
